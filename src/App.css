@@ -1,39 +1,62 @@
 .App {
+  display: flex;
+  height: 100%;
   text-align: center;
+  background-color: #18191a;
+  color: #f5f6f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.HomeHeader {
+  grid-area: header;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.todoList {
+  grid-area: todoList;
 }
 
-.App-header {
-  min-height: 100vh;
+.AppBody {
+  display: grid;
+  width: 90%;
+  height: 100%;
+
+  grid-template-rows: 1fr 8fr;
+
+
+  grid-template-areas: 
+  "header"
+  "todoList";
+}
+
+.SideBar {
+  width: 10%;
+  background-color: #242526;
+}
+
+.SideBarLinks {
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: start;
+  
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.SideBarLinks a {
+  text-decoration: none;
+  text-decoration-color: none;
+  margin: 0.25rem 0;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.SideBarLinks ul {
+  padding-left: 0;
+}
+
+.SideBarLinks li {
+  list-style: none;
+  padding: 0.4rem 0;
+  padding-left: 1rem;
+}
+
+.SideBarLinks li:hover {
+  background-color: #5FA2DB;
+  cursor: pointer;
 }
