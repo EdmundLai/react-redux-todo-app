@@ -22,10 +22,19 @@ const todosSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
-    addTodo(state, action) {
-      state.concat(action.payload);
+    todoAdded(state, action) {
+      const { task, date } = action.payload;
+      const newTask = {
+        task: task,
+        completed: false,
+        date: date,
+      };
+      //console.log(state);
+      state.push(newTask);
     },
   },
 });
+
+export const { todoAdded } = todosSlice.actions;
 
 export default todosSlice.reducer;

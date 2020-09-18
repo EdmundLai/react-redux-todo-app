@@ -1,35 +1,32 @@
+@import '~antd/dist/antd.css';
+
 .App {
   display: flex;
   height: 100%;
-  text-align: center;
-  background-color: #18191a;
-  color: #f5f6f7;
+  background-color: #EDF6F9;
 }
 
 .HomeHeader {
   grid-area: header;
+
+  text-align: center;
 }
 
 .todoList {
   grid-area: todoList;
+
+  width: 80%;
 }
 
 .AppBody {
-  display: grid;
   width: 90%;
   height: 100%;
-
-  grid-template-rows: 1fr 8fr;
-
-
-  grid-template-areas: 
-  "header"
-  "todoList";
 }
 
 .SideBar {
   width: 10%;
-  background-color: #242526;
+  background-color: #006D77;
+  border-right: 0.1rem solid lightblue;
 }
 
 .SideBarLinks {
@@ -38,6 +35,10 @@
   flex-direction: column;
   text-align: start;
   
+}
+
+.SideBarHighlighted {
+  border-left: lightblue solid;
 }
 
 .SideBarLinks a {
@@ -59,4 +60,42 @@
 .SideBarLinks li:hover {
   background-color: #5FA2DB;
   cursor: pointer;
+}
+
+.HomePage {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.HomeContent {
+  width: 90%;
+
+  display: grid;
+
+  grid-template-rows: 1fr 8fr;
+
+
+  grid-template-areas: 
+  "header"
+  "todoList";
+}
+
+.createTodo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createTodoContent {
+  width: 50%;
+}
+
+.createTodoHeader {
+  text-align: center;
+}
+
+.todoActions {
+  display: flex;
+  justify-content: flex-end;
 }

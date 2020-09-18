@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import logo from "./logo.svg";
 //import { Counter } from "./features/counter/Counter";
 import { SideBar } from "./features/Sidebar/SideBar";
-import { TodoList } from "./features/todoList/todoList";
+import { HomePage } from "./features/HomePage/HomePage";
+import { CreateTodo } from "./features/todoList/createTodo";
+import { CalendarTasks } from "./features/calendar/CalendarTasks";
 
 import "./App.css";
 
@@ -15,15 +17,12 @@ function App() {
         <div className="AppBody">
           <Switch>
             <Route exact path="/">
-              <div className="HomeHeader">
-                <h1>Home</h1>
-              </div>
-
-              <TodoList />
+              <HomePage />
             </Route>
             <Route exact path="/calendar">
-              Calendar
+              <CalendarTasks />
             </Route>
+            <Route exact path="/addTodo" component={CreateTodo} />
           </Switch>
         </div>
       </div>
