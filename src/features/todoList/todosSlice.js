@@ -15,7 +15,7 @@ const initialState = [
   {
     id: nanoid(),
     task: "create a calendar app",
-    completed: false,
+    completed: true,
     date: format(tomorrowsDate, "MM/dd/yyyy"),
   },
 ];
