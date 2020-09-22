@@ -1,7 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import logo from "./logo.svg";
-//import { Counter } from "./features/counter/Counter";
 import { SideBar } from "./features/Sidebar/SideBar";
 import { HomePage } from "./features/HomePage/HomePage";
 import { CreateTodo } from "./features/todoList/createTodo";

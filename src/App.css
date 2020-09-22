@@ -6,15 +6,13 @@
   background-color: #EDF6F9;
 }
 
-.HomeHeader {
-  grid-area: header;
-
+.PageHeader {
   text-align: center;
+
+  margin: 2rem 0;
 }
 
 .todoList {
-  grid-area: todoList;
-
   width: 80%;
 }
 
@@ -25,6 +23,7 @@
 
 .SideBar {
   width: 10%;
+  min-width: 100px;
   background-color: #006D77;
   border-right: 0.1rem solid lightblue;
 }
@@ -71,14 +70,11 @@
 .HomeContent {
   width: 90%;
 
-  display: grid;
+  display: flex;
 
-  grid-template-rows: 1fr 8fr;
+  flex-direction: column;
 
-
-  grid-template-areas: 
-  "header"
-  "todoList";
+  align-items: center;
 }
 
 .createTodo {
@@ -98,4 +94,44 @@
 .todoActions {
   display: flex;
   justify-content: flex-end;
+}
+
+.events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.events .ant-badge-status {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoCheckbox {
+  margin-right: 1rem;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+}
+
+.calendarTasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CalendarContainer {
+  width: 95%;
+  border: 0.1rem solid teal;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  
 }

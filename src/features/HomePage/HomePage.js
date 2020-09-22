@@ -6,9 +6,8 @@ export function HomePage() {
   return (
     <div className="HomePage">
       <div className="HomeContent">
-        <div className="HomeHeader">
-          <h1>Home</h1>
-        </div>
+        <h1 className="PageHeader">Home</h1>
+
         <TodoList />
       </div>
     </div>

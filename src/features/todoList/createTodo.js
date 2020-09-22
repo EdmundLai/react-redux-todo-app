@@ -58,7 +58,7 @@ export function CreateTodo() {
   return (
     <div className="createTodo">
       <div className="createTodoContent">
-        <h2 className="createTodoHeader">Create a new Todo</h2>
+        <h2 className="PageHeader">Create a new Todo</h2>
         <Form
           {...layout}
           name="TodoForm"
@@ -74,7 +74,7 @@ export function CreateTodo() {
               onChange={onTaskChanged}
             />
           </Form.Item>
-          <Form.Item>
+          <Form.Item label="Completion Date">
             <DatePicker
               onChange={onChangeDate}
               defaultValue={new Date()}
